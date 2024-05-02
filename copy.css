@@ -1,0 +1,253 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{background-color: white;}
+
+/*-------------------------------------------- header portion --------------------------------------------|*/
+
+.header{
+    top: 0;
+    margin: 0;
+    background: rgb(255, 224, 158);
+    width: 100%;
+    display: inline-flex;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    height: auto;
+    padding: 5px 0;
+    justify-content: space-between;    
+    position: sticky;
+    overflow: hidden;
+}
+.header-menu{
+    cursor: pointer;
+    top: 0;
+    padding: 1% 0 0 0;
+    padding-top: 1%;
+    height: auto;
+    margin-left: 3%;
+}
+.header-menu .line1,
+.header-menu .line2,
+.header-menu .line3{
+    width: 30px;
+    height: 6px;
+    background-color: teal;
+    border-radius: 20px;
+}
+.header-menu .line2,
+.header-menu .line3{
+    margin-top: 20%;
+}
+.header-menu .line2{ width: 17px;}
+.header-title{width: 40%;}
+.header-title img{
+    top: 0;
+    bottom: 0;
+    margin-left: 12%;
+    width: 180px;
+}
+.header-right{
+    margin-left: auto;
+    padding: 2% 4% 0 0;
+    cursor: pointer;
+    display: inline-flex;
+    height: auto;
+}
+.header-right img{
+    margin-left: auto;
+    width: 6%;
+    margin-right: 6px;
+}
+.header-right span{
+    color: #008080;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+}
+
+
+/*----------------------------------------------- dropdown menu portion ------------------------------------*/
+
+.menu-content{
+    width: 0;
+    height: 98%;
+    background-color: rgb(255, 239, 220); 
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    position: fixed;
+    overflow-y: scroll;
+}.menu-content-inside{padding-bottom: 30px;}
+.menu-content-inside a{
+    margin: 0% 5% 1% 10%;
+    display: block;
+    margin-bottom: 3%;
+    display: flex;
+    border-radius: 8px;
+    font-size: 19px;
+    text-decoration: none;
+    color: #008089;
+}
+.menu-content-inside a img{
+    width: 38px;
+    height: 38px;
+    margin: 8px;
+}
+.menu-content-inside a span{
+    margin: 10px 10px 10px 10px;
+}
+.menu-content-inside a:hover{background-color: rgb(193, 255, 190);}
+
+.menu-hr{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #008089;
+    border: 1px solid #ffffff;
+}
+.menu-content input{
+    width: 93%;
+    margin-left: 10%;
+    margin-top: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: rgb(215, 255, 213);
+    outline: none;
+    border: 0.2px solid rgb(255, 165, 133);
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: cursive;
+    color: rgb(5, 80, 80);
+}
+.menu-content input:hover{background-color: white;}
+
+.show{display: block; width: 20%;}
+
+/*------------------------------------------ search of services ------------------------------------------*/
+
+.govsearch{
+    width: 100%;
+    padding-top: 30px;
+}
+.govsearch label{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: rgb(0, 194, 194);
+}
+.govsearch .govsearchservices{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 30px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.04);
+    display: flex;
+}
+.govsearch .govsearchservices input{
+    width: 90%;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 5px 5px 5px 33px;font-size: 20px;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.74);
+}
+.govsearch .govsearchservices img{
+    width: 35px;
+    height: 35px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+            .govsearchservices {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.govsearchservices-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 95;
+  /*position the govsearchservices items to be the same width as the container:*/
+  top: 100%;
+  margin-top: 2px;
+  left: 0;
+  margin-left: 21px;
+  right: 0;
+  margin-right: 35px;
+}
+
+.govsearchservices-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4;
+  text-align: left;
+}
+
+/*when hovering an item:*/
+.govsearchservices-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.govsearchservices-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}            
+            
+            
+            
+
+/*----------------------------------------- mobile view --------------------------------------------------*/
+
+@media{
+    .header-menu{
+        margin-top: 20px;
+    }
+    .header-menu .line1,
+    .header-menu .line2,
+    .header-menu .line3{
+        width: 22px;
+    }
+    .header-menu .line2{width: 14px;}
+
+    .header-title img{
+        width: 150px;
+    }
+    .header-right{
+        padding: 24px 20px 10px 0;
+        display: inline-flex;
+    }
+    .header-right img{
+        width: 30px;
+        height: 30px;
+    }
+    .header-right span{
+        margin-top: 0%;
+    }
+    .show{width: 280px;}    
+    .menu-content input{margin-left: 2%;}
+    .menu-content-inside a img{width: 30px;height: 30px;}
+    .menu-content .menu-content-inside a{margin-left: 3%;}
+    .govsearch{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .govsearch label{width: 100%; font-size: 23px;}
+    .govsearch .govsearchservices img{width: 15px;height: 15px;padding-right: 10px;padding-left: 10px;}
+}
